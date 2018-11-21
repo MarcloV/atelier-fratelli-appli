@@ -1,0 +1,42 @@
+<ion-content  class="bg" padding>
+    <ion-img width="80" height="80" src="../../assets/imgs/logo.png"></ion-img>
+    <h6 ion-text color="light">Commandes App</h6>
+
+  <ion-card padding>
+    <ion-item>
+    <ion-label floating >Nom</ion-label>
+    <ion-input type="text" [(ngModel)]="profil.nom"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label floating >Prenom</ion-label>
+      <ion-input type="text" [(ngModel)]="profil.prenom"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating >Societe</ion-label>
+        <ion-input type="text" [(ngModel)]="profil.societe"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating >Adresse</ion-label>
+          <ion-input type="text" [(ngModel)]="profil.adresse"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating >Telephone</ion-label>
+            <ion-input type="number" [(ngModel)]="profil.telephone"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label floating >Siret</ion-label>
+              <ion-input type="number" [(ngModel)]="profil.siret"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Type de livraison</ion-label>
+                <ion-select [(ngModel)]="profil.livraison">
+                  <ion-option value="axb">A x B</ion-option>
+                  <ion-option value="axc">A x C</ion-option>
+                </ion-select>
+              </ion-item>
+    <button ion-button class= "btn" color="light"  (click)="createProfil()" padding>Enregister</button>
+  </ion-card>
+ 
+  
+</ion-content>
+

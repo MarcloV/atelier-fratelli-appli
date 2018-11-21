@@ -1,0 +1,167 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        {{(profilData | async)?.societe}}
+      </ion-title>
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding>
+    <ion-row>
+      <ion-col col-12>
+        <h6 class="titre" padding  text-center>Commandes Salées</h6>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col>
+        <button ion-button icon-only color="light"><ion-icon name="print"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  
+        
+
+          <ion-row>
+              <ion-col>
+                  <ion-card>
+                      <ion-card-header>Commande</ion-card-header>
+                      <ion-item>
+            <ion-label>Date d'envoi :</ion-label>
+            <ion-input type="date" [formControl]="form.get('date')"></ion-input>
+          </ion-item>
+                      <ion-item>
+                          <ion-label stacked>Focaccia</ion-label>
+                          <ion-input [formControl]="form.get('focaccia')"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                          <ion-label stacked>vinaigrette</ion-label>
+                          <ion-input [formControl]="form.get('vinaigrette')"></ion-input>
+                      </ion-item>
+                    
+                  </ion-card>
+      
+                  <ion-card>
+                      <ion-card-header>Pizza</ion-card-header>
+                      <ion-item>
+                          <ion-label stacked>Tartufo</ion-label>
+                          <ion-input [formControl]="form.get('pizza').get('tartufo')"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                              <ion-label stacked>Bufala</ion-label>
+                              <ion-input [formControl]="form.get('pizza').get('bufala')"></ion-input>
+                          </ion-item>
+                          <ion-item>
+                                  <ion-label stacked>Capra</ion-label>
+                                  <ion-input [formControl]="form.get('pizza').get('capra')"></ion-input>
+                              </ion-item>
+                              <ion-item>
+                                      <ion-label stacked>Parma</ion-label>
+                                      <ion-input [formControl]="form.get('pizza').get('parma')"></ion-input>
+                                  </ion-item>
+                                  <ion-item>
+                                          <ion-label stacked>Tonno</ion-label>
+                                          <ion-input [formControl]="form.get('pizza').get('tonno')"></ion-input>
+                                      </ion-item>
+                                      <ion-item>
+                                              <ion-label stacked>5 fromagges</ion-label>
+                                              <ion-input [formControl]="form.get('pizza').get('formaggi')"></ion-input>
+                                          </ion-item>
+                    
+                  </ion-card>
+                  <ion-card>
+                          <ion-card-header>Frais</ion-card-header>
+                          <ion-item>
+                              <ion-label stacked>Mozzarella</ion-label>
+                              <ion-input [formControl]="form.get('frais').get('mozzarella')"></ion-input>
+                          </ion-item>
+                          <ion-item>
+                                  <ion-label stacked>Fontina</ion-label>
+                                  <ion-input [formControl]="form.get('frais').get('fontina')"></ion-input>
+                              </ion-item>
+                              <ion-item>
+                                      <ion-label stacked>Parmesan</ion-label>
+                                      <ion-input [formControl]="form.get('frais').get('parmesan')"></ion-input>
+                                  </ion-item>
+                                  <ion-item>
+                                          <ion-label stacked>Parme</ion-label>
+                                          <ion-input [formControl]="form.get('frais').get('parme')"></ion-input>
+                                      </ion-item>
+                                      <ion-item>
+                                              <ion-label stacked>Speck</ion-label>
+                                              <ion-input [formControl]="form.get('frais').get('speck')"></ion-input>
+                                          </ion-item>
+                                      <ion-item>
+                                              <ion-label stacked>Jambon</ion-label>
+                                              <ion-input [formControl]="form.get('frais').get('jambon')"></ion-input>
+                                          </ion-item>
+                                          <ion-item>
+                                                  <ion-label stacked>Poulet</ion-label>
+                                                  <ion-input [formControl]="form.get('frais').get('poulet')"></ion-input>
+                                              </ion-item>
+                                              
+                      </ion-card>
+                      <ion-card>
+                              <ion-card-header>Legumes</ion-card-header>
+                              <ion-item>
+                                  <ion-label stacked>Salade</ion-label>
+                                  <ion-input [formControl]="form.get('legumes').get('salade')"></ion-input>
+                              </ion-item>
+                              <ion-item>
+                                      <ion-label stacked>Roquette</ion-label>
+                                      <ion-input [formControl]="form.get('legumes').get('roquette')"></ion-input>
+                                  </ion-item>
+                                  <ion-item>
+                                          <ion-label stacked>Tomate Cerise</ion-label>
+                                          <ion-input [formControl]="form.get('legumes').get('tomateCerise')"></ion-input>
+                                      </ion-item>
+                                      <ion-item>
+                                              <ion-label stacked>Tomate Focaccia</ion-label>
+                                              <ion-input [formControl]="form.get('legumes').get('tomateFocaccia')"></ion-input>
+                                          </ion-item>
+                                          <ion-item>
+                                                  <ion-label stacked>Tomates Sechées</ion-label>
+                                                  <ion-input [formControl]="form.get('legumes').get('tomateSechee')"></ion-input>
+                                              </ion-item>
+                                              <ion-item>
+                                                      <ion-label stacked>Carottes</ion-label>
+                                                      <ion-input [formControl]="form.get('legumes').get('carottes')"></ion-input>
+                                                  </ion-item>
+                                                  <ion-item>
+                                                          <ion-label stacked>Champignons</ion-label>
+                                                          <ion-input [formControl]="form.get('legumes').get('champignons')"></ion-input>
+                                                      </ion-item>
+                                                      <ion-item>
+                                                            <ion-label stacked>Aubergines</ion-label>
+                                                            <ion-input [formControl]="form.get('legumes').get('aubergine')"></ion-input>
+                                                        </ion-item>
+                                                      <ion-item>
+                                                              <ion-label stacked>Oignons Rouges</ion-label>
+                                                              <ion-input [formControl]="form.get('legumes').get('oignonsRouges')"></ion-input>
+                                                          </ion-item>
+                                                          <ion-item>
+                                                                  <ion-label stacked>Oignons Caramelises</ion-label>
+                                                                  <ion-input [formControl]="form.get('legumes').get('oignonsCaramelises')"></ion-input>
+                                                              </ion-item>
+                          </ion-card>
+      
+              </ion-col>
+          <button ion-button class="btn" (click)="saveCommande()">Envoyer</button>
+          </ion-row>
+        
+    </ion-content>
+    <ion-footer class="infolabo" padding-left>
+        <p>Info Laboratoire</p>
+        <ion-row>
+          <ion-col>
+        <p text-center><ion-icon name="phone-portrait"></ion-icon> 09 81 42 68 88</p>
+      </ion-col>
+      </ion-row>
+        <ion-row>
+          <ion-col>
+          <p>26, rue de la chine 75020 </p>
+          </ion-col>
+          <ion-col>
+                <p>Votre livraison : {{(profilData | async)?.livraison}}</p>
+          </ion-col>
+        </ion-row>
+        </ion-footer>
+    

@@ -1,0 +1,18 @@
+<ion-content  class="bg" padding>
+    <ion-img width="80" height="80" src="../../assets/imgs/logo.png"></ion-img>
+    <h6 ion-text color="light">Commandes App</h6>
+
+  <ion-card padding>
+    <ion-item>
+    <ion-label floating >Email</ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label floating >Mot de passe</ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <button ion-button class= "btn" color="light"  (click)="register(user)" padding>Enregister</button>
+  </ion-card>
+ 
+  
+</ion-content>

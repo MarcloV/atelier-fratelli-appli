@@ -1,14 +1,34 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding="true" class="bg" >
+    <ion-img width="80" height="80" src="../../assets/imgs/logo.png"></ion-img>
+    <h6 ion-text color="light">Commandes App</h6>
+    <ion-list padding>
+
+   <ion-list>
+
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="text" #username></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Password</ion-label>
+    <ion-input type="password" #password></ion-input>
+  </ion-item>
+  
+</ion-list>
+    
+   <p ion-text color="light">Oublié votre mot de passe? Appelez au 09 09 09 09 09</p>
+ <ion-row>    
+ <button ion-button class="btn" padding   (click)="submitLogin()">Connectez-vous</button>
+</ion-row>   
+<ion-row> 
+  <button ion-button color="light"  (click)="inscription()" padding>S'inscrire</button>
+ 
+</ion-row>  
+<ion-row>   
+ <button ion-button class="btn" padding (click)="laboConnexion()">Connexion Laboratoire</button>
+</ion-row>   
+</ion-list>
+
 </ion-content>

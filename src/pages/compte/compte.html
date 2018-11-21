@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+          {{(profilData | async)?.societe}}
+      </ion-title>
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding="true" >
+    <ion-img width="80" height="80" src="../../assets/imgs/logo.png"></ion-img>
+    <h6 class="titre" padding  text-center>Mon Compte</h6>
+<ion-card>
+  <ion-list>
+  <ion-item>
+      <p>Prenom : {{(profilData | async)?.prenom}} </p>
+  </ion-item>
+  <ion-item>
+      <p>Nom : {{(profilData | async)?.nom}} </p>
+  </ion-item>
+  <ion-item>
+      <p>Societe : {{(profilData | async)?.societe}} </p>
+  </ion-item>
+  <ion-item>
+      <p> Adresse : {{(profilData | async)?.adresse}} </p>
+  </ion-item>
+  <ion-item>
+      <p> Telephone : {{(profilData | async)?.telephone}} </p>
+  </ion-item>
+  <ion-item>
+      <p> Siret : {{(profilData | async)?.siret}} </p>
+  </ion-item>
+  <ion-item>
+      <p> Livraison : {{(profilData | async)?.Livraison}} </p>
+  </ion-item>
+</ion-list>
+</ion-card>
+
+</ion-content>
+
+<ion-footer class="infolabo" padding-left >
+    <p>Info Laboratoire</p>
+    <ion-row>
+      <ion-col>
+    <p text-center><ion-icon name="phone-portrait"></ion-icon> 09 81 42 68 88</p>
+  </ion-col>
+  </ion-row>
+    <ion-row>
+      <ion-col>
+      <p>26, rue de la chine 75020 </p>
+      </ion-col>
+      <ion-col>
+  <p>Votre livraison : {{(profilData | async)?.livraison}}</p>
+      </ion-col>
+    </ion-row>
+    </ion-footer>

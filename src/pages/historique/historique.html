@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+    
+          {{(profilData | async)?.societe}}
+      </ion-title>
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+      <ion-searchbar
+      [(ngModel)]="myInput"
+      [showCancelButton]="shouldShowCancel"
+      (ionInput)="onInput($event)"
+      (ionCancel)="onCancel($event)">
+    </ion-searchbar>
+
+  </ion-content>
+ <ion-footer class="infolabo" padding-left >
+  <p>Info Laboratoire</p>
+  <ion-row>
+    <ion-col>
+  <p text-center><ion-icon name="phone-portrait"></ion-icon> 09 81 42 68 88</p>
+</ion-col>
+</ion-row>
+  <ion-row>
+    <ion-col>
+    <p>26, rue de la chine 75020 </p>
+    </ion-col>
+    <ion-col>
+<p>Votre livraison : {{(profilData | async)?.livraison}}</p>
+    </ion-col>
+  </ion-row>
+  </ion-footer>

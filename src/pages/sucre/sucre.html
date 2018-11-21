@@ -1,0 +1,76 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        {{(profilData | async)?.societe}}
+      </ion-title>
+        <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding>
+    <ion-row>
+      <ion-col col-12>
+        <h6 class="titre" padding  text-center>Commandes Sucrées</h6>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-col>
+        <button ion-button icon-only color="light"><ion-icon name="print"></ion-icon></button>
+      </ion-col>
+    </ion-row>
+  
+        
+
+          <ion-row>
+              <ion-col>
+                  <ion-card>
+                      <ion-card-header>Commande</ion-card-header>
+                      <ion-item>
+            <ion-label>Date d'envoi :</ion-label>
+            <ion-input type="date" [formControl]="form.get('date')"></ion-input>
+          </ion-item>
+                      <ion-item>
+                          <ion-label stacked>Tiramisu Cafe</ion-label>
+                          <ion-input [formControl]="form.get('tiramisu').get('cafe')"></ion-input>
+                      </ion-item>
+                      <ion-item>
+                        <ion-label stacked>Tiramisu Gianduja</ion-label>
+                        <ion-input [formControl]="form.get('tiramisu').get('gianduja')"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                      <ion-label stacked>Tiramisu Coco</ion-label>
+                      <ion-input [formControl]="form.get('tiramisu').get('coco')"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label stacked>Tiramisu Fruits Rouges</ion-label>
+                    <ion-input [formControl]="form.get('tiramisu').get('fruitsrouges')"></ion-input>
+                </ion-item>
+                      <ion-item>
+                          <ion-label stacked>Panna Cotta</ion-label>
+                          <ion-input [formControl]="form.get('pannacotta')"></ion-input>
+                      </ion-item>
+                    
+                  </ion-card>
+      
+              </ion-col>
+          <button ion-button class="btn" (click)="saveCommandeSucre()">Envoyer</button>
+          </ion-row>
+        
+    </ion-content>
+    <ion-footer class="infolabo" padding-left>
+        <p>Info Laboratoire</p>
+        <ion-row>
+          <ion-col>
+        <p text-center><ion-icon name="phone-portrait"></ion-icon> 09 81 42 68 88</p>
+      </ion-col>
+      </ion-row>
+        <ion-row>
+          <ion-col>
+          <p>26, rue de la chine 75020 </p>
+          </ion-col>
+          <ion-col>
+      <p>Votre livraison : {{(profilData | async)?.livraison}}</p>
+          </ion-col>
+        </ion-row>
+        </ion-footer>
+    
+

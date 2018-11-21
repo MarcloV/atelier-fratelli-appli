@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{(profilData | async)?.societe}}
+    </ion-title>
+      <button ion-button menuToggle><ion-icon name="menu"></ion-icon></button>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding margin-horizontal>
+  
+  <ion-img width="300" height="210"  object-fit: cover src="../../assets/imgs/focaccia-tartufo.jpg"></ion-img>  
+ 
+  <ion-item>
+  <button ion-button padding class="btn"(click)="onButtonClicked()" >Commander Salée</button>
+ </ion-item>
+ <ion-item>
+  <button ion-button  class="btn" (click)="onButtonClicked2()" padding>Commander Sucrée</button>
+ </ion-item>
+ </ion-content>
+
+ <ion-footer class="infolabo" padding-left >
+  <p>Info Laboratoire</p>
+  <ion-row>
+    <ion-col>
+  <p text-center><ion-icon name="phone-portrait"></ion-icon> 09 81 42 68 88</p>
+</ion-col>
+</ion-row>
+  <ion-row>
+    <ion-col>
+    <p>26, rue de la chine 75020 </p>
+    </ion-col>
+    <ion-col>
+<p>Votre livraison : {{(profilData | async)?.livraison}}</p>
+    </ion-col>
+  </ion-row>
+  </ion-footer>

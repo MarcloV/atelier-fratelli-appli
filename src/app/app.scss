@@ -14,3 +14,20 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+@font-face {
+    font-family: 'Montserrat';
+    @import url('https://fonts.googleapis.com/css?family=Montserrat');
+    font-weight: lighter;
+    font-style: medium;
+   
+  }
+  
+  * {
+    font-family: 'Montserrat';
+  }
+  .titre{
+    background-color: #4D5B42;
+    color: #ffffff;
+    height: 40px;
+    font-size: 15px;
+  }
